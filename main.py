@@ -22,13 +22,11 @@ def resource_path(relative_path: str) -> str:
     base_path = getattr(sys, "_MEIPASS", os.path.abspath("."))
     return os.path.join(base_path, relative_path)
 
-# to tell a break starts by lifitng and a sound
+# to tell a break starts by lifitng to the front page
 def bring_to_front():
     window.deiconify()
     window.lift()
     window.attributes("-topmost", True)
-    # window.after(200, lambda: window.attributes("-topmost", False))
-    # window.bell()
     window.focus_force()
 
 # ---------------------------- TIMER RESET ------------------------------- # 
